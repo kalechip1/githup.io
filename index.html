@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+ <a href="http://simplystem.com">
+ </a>
+ <head>
+   <header id="banner">Quiz time</header>
+  <title>Meths Cless</title>
+  <script>
+    fuction banner(){
+      var text = confirm("Why did you call me?");
+      return text;
+    }
+  </script>
+  <link type="text/css" rel="stylesheet" href="main.css" />
+ </head>
+
+
+ <body id=background>
+   <h1>Elgebre</h1>
+    
+    <p><strong>This is a <u>Quiz</u> so <i>no talking and no phones</i></strong></p>
+    
+    <p>Questions will be red and equasions are in green</p>
+   
+    <div class="wrap-trivia">
+  
+    <h4 style="color:red;">What is <strong>x</strong> in this case?</h4>
+    
+    <p style="color:green;"> 8x-2=8+3x </p>
+  
+  <form>
+      <input type="radio" name="trivia" value="-2"> -2<br>
+      <input type="radio" name="trivia" value="-1"> -1<br>
+      <input type="radio" name="trivia" value="0"> 0<br>
+      <input type="radio" name="trivia" value="1"> 1<br>
+      <input type="radio" name="trivia" value="2"> 2<br>
+      <input type="button" value="Check answer" id="button" onclick="run()">
+      <div id="response"></div>
+    </form>
+    
+   <script>
+     function run(){
+    	var r = document.getElementsByName("trivia");
+  	  var e = document.getElementById("response");
+  	    for(var i=0; i <r.length; i++){
+  		    if(r[i].checked == true && r[i].value == "2"){
+  			    e.innerHTML = "Correct";
+  			    return;
+  		    } else {
+        	    e.innerHTML = "So close";
+          }
+  	  }
+    }
+    </script>
+    
+    </div>
+    
+    <footer id="footer"> Created by yours truly </footer>
+  
+  </body>
+</html>
